@@ -1,9 +1,8 @@
 FROM alpine:3.24.2
 
 ENV ARCH=arm64
-ENV CROSS_COMPILE=aarch64-alpine-linux-musl-
 
-ARG PACKAGES="arm-trusted-firmware alpine-sdk bc bison dtc flex gnutls-dev linux-headers ncurses-dev \
+ARG PACKAGES="arm-trusted-firmware alpine-sdk bash build-base bc bison dtc flex gnutls-dev linux-headers ncurses-dev \
   openssl-dev py3-elftools py3-setuptools python3-dev sdl2-dev swig util-linux-dev"
 
 RUN apk add ${PACKAGES} --no-cache

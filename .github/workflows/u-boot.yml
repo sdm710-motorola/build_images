@@ -8,7 +8,7 @@ jobs:
   build:
     environment: main
     name: Build U-Boot Docker Image
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     
     permissions:
       contents: read
@@ -39,3 +39,4 @@ jobs:
           file: ./u-boot/Dockerfile
           labels: ${{ steps.metadata.outputs.labels }}
           tags: ${{ steps.metadata.outputs.tags }}
+          
